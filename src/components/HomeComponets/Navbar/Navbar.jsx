@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
-import { Phone, Mail, Menu } from 'lucide-react';
+import { Phone, Mail, Menu, ArrowUp } from 'lucide-react';
 import { assets } from '../../../assets/assets';
 import { NavLink, Link } from 'react-router-dom';
 
@@ -9,7 +9,30 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
+  const[visible, setVisible] = useState(false);
 
+
+
+  const scrollToBottom =()=>{
+    if(window.scrollY>300){
+      setVisible(true)
+    }
+    else{
+      setVisible(false)
+    }
+  }
+  const scrollToTop =()=>{
+     window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+     });
+  }
+  useEffect(()=>{
+    window.addEventListener('scroll', scrollToBottom);
+    return () => {
+      window.removeEventListener('scroll', scrollToBottom);
+    }
+  },[])
   const navLinkClass = ({ isActive }) =>
     isActive ? 'nav-item active' : 'nav-item';
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
@@ -17,6 +40,15 @@ const Navbar = () => {
 
   return (
     <>
+ {visible && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-10 right-10 z-50 bg-black text-white p-3 rounded-full shadow-md hover:bg-gray-800 transition"
+        >
+          <ArrowUp className="w-5 h-5" />
+        </button>
+      )}
+    
       {/* Top Header */}
       <div className="flex justify-between items-center bg-black text-white px-6 py-3 text-[12px] font-semibold">
         <div className="flex items-center gap-2">

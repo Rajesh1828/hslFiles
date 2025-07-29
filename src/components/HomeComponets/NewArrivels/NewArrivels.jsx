@@ -60,7 +60,7 @@ const NewArrivels = () => {
 
   return (
     <>
- <div className="h-[500px] ">
+ <div className="h-[450px] ">
   <h1 className="text-3xl  font-bold md:text-4xl text-center mt-5 text-black">
     Elevate Your Desk – New Arrivals in Style!
   </h1>
