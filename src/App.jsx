@@ -15,10 +15,10 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='about' element={<About/>}/>
-        <Route path='collections' element={<Collections/>}/>
-        <Route path='product:id' element={<Product/>}/>
-        <Route path='contact' element={<Contact/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/collections' element={<Collections/>}/>
+        <Route path='/product/:productId' element={<Product/>}/>
+        <Route path='/contact' element={<Contact/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
       </Routes>
       <Footer/>

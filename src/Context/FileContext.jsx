@@ -1,43 +1,40 @@
-
-import { createContext, useState } from "react";
-// import { StoreContext } from "../../../../reactjs/frontend/src/context/StoreContext";
+// FileContext.jsx
+import { createContext, useState, useContext } from "react";
 import { collection } from "../assets/assets";
 
- export const FileContext = createContext(null);
+export const FileContext = createContext(null);
 
+export const StoreContextFileProvider = ({ children }) => {
+  const [cartItems, setCartItems] = useState({});
 
- const StoreContextFileProvider =(props)=>{
+  const currency = "₹"
 
-  const[cartItems,setCartItems] = useState({});
-
-
-  const addToCart =(itemId)=>{
-    if(!cartItems[itemId]){
-      setCartItems(prev =>({...prev,[itemId]:1}))
-    }else{
-      setCartItems(prev=>({...prev,[itemId]:prev[itemId]+1}))
+  {/* Function to add an item to the cart */ }
+  const addToCart = (itemId) => {
+    if (!cartItems[itemId]) {
+      setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
+    } else {
+      setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     }
-  }
+  };
 
-  const removeFromCart = (itemId)=>{
-    
-      setCartItems(prev=>({...prev,[itemId]:prev[itemId]-1}))
-    
-  }
+  {/* Function to remove an item from the cart */ }
+  const removeFromCart = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+  };
 
-  console.log(cartItems)
-    const contextValue ={
-      collection,
-      cartItems,
-      addToCart,
-      removeFromCart
-    }
-  return(
+  {/* Provide the context value */ }
+  const contextValue = {
+    collection,
+    cartItems,
+    addToCart,
+    removeFromCart,
+    currency
+  };
+
+  return (
     <FileContext.Provider value={contextValue}>
-        {props.children}
+      {children}
     </FileContext.Provider>
-  )
- }
- 
- 
- export default StoreContextFileProvider
+  );
+};

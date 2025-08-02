@@ -9,7 +9,7 @@ const Category = ({ isActive, setIsActive }) => {
       <h2 className='text-xl md:text-3xl font-bold text-center mt-2 mb-3'>
         "Find Your Flow – One Category at a Time."
       </h2>
-
+ 
       <p className='text-justify md:text-center max-w-3xl mb-6'>
         Explore our thoughtfully organized categories designed to make your shopping effortless and inspiring...
       </p>
