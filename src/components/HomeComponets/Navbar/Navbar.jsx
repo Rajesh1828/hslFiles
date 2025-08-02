@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Navbar.css';
-import { Phone, Mail, Menu, ArrowUp } from 'lucide-react';
+import { Phone, Mail, Menu, ArrowUp,ShoppingBag } from 'lucide-react';
 import { assets } from '../../../assets/assets';
 import { NavLink, Link } from 'react-router-dom';
+import { FileContext } from '../../../Context/FileContext';
 
 const Navbar = () => {
 
@@ -10,6 +11,7 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
   const[visible, setVisible] = useState(false);
+  const{getCartCount}=useContext(FileContext)
 
 
 
@@ -98,6 +100,14 @@ const Navbar = () => {
 
 
         <div className="right-section flex items-center gap-4">
+
+          <Link to='/cart'>
+          <ShoppingBag className="w-6 h-6 cursor-pointer" />
+          <p className='absolute md:top-10 md:right-50 top-9 right-56 bg-gray-500 text-white w-4 h-4 flex items-center justify-center rounded-full'>
+            {getCartCount()}
+          </p>
+          </Link>
+
           <NavLink to="/contact">
             <button className="bg-black flex items-center gap-2 py-2 px-5 rounded-2xl text-white cursor-pointer uppercase">
               Contact <Phone className="w-4 h-4 text-white" />

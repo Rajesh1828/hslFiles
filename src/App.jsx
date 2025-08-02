@@ -8,10 +8,14 @@ import Contact from './pages/Contact'
 import Navbar from './components/HomeComponets/Navbar/Navbar'
 import Gallery from './pages/Gallery'
 import Footer from './components/HomeComponets/Footer/Footer'
+import { ToastContainer} from 'react-toast'
+import Cart from './pages/Cart'
+
 const App = () => {
   return (
     <>
     <div>
+      <ToastContainer/>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
@@ -20,6 +24,7 @@ const App = () => {
         <Route path='/product/:productId' element={<Product/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
       <Footer/>
     
