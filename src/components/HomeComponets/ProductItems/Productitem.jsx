@@ -7,10 +7,10 @@ const Productitem = ({ id, name, image }) => {
     
     const{currency}=useContext(FileContext)
     return (
-        <div className=' bg-gray-100 shadow-md  rounded-2xl px-5 py-4 animation-fadeIn' >
+        <div className=' rounded-2xl px-5 py-4 animation-fadeIn' >
             <Link to ={`/product/${id}`}>
             <div>
-                <img  src={image} alt="" className=' w-[100%] h-[200px] transition duration-500 ease-in-out hover:scale-103 rounded-2xl' />
+                <img  src={image} alt="" className=' w-[100%]  transition duration-500 ease-in-out hover:scale-103 rounded-2xl' />
                   <div className='flex justify-center mt-1  gap-3'>
                   </div>
             </div>

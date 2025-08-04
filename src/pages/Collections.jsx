@@ -8,9 +8,10 @@ const Collections = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [filteredData, setFilteredData] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [sizes, setSizes] = useState([]);
 
-  // Handle checkbox changes
-  const filterItems = (e) => {
+  // Category checkbox handler
+  const filterCategory = (e) => {
     const value = e.target.value;
     if (categories.includes(value)) {
       setCategories((prev) => prev.filter((item) => item !== value));
@@ -19,21 +20,39 @@ const Collections = () => {
     }
   };
 
-  // Initial collection load
+  // Size checkbox handler
+  const filterSize = (e) => {
+    const value = e.target.value;
+    if (sizes.includes(value)) {
+      setSizes((prev) => prev.filter((item) => item !== value));
+    } else {
+      setSizes((prev) => [...prev, value]);
+    }
+  };
+
+  // Initial load
   useEffect(() => {
     setFilteredData(collection);
   }, [collection]);
 
-  // Apply filters on category change
+  // Filtering logic
   useEffect(() => {
     let filteredCopy = collection.slice();
+
     if (categories.length > 0) {
-      filteredCopy=filteredCopy.filter((item) =>
+      filteredCopy = filteredCopy.filter((item) =>
         categories.includes(item.categories)
       );
     }
+
+    if (sizes.length > 0) {
+      filteredCopy = filteredCopy.filter((item) =>
+        sizes.includes(item.sizes)
+      );
+    }
+
     setFilteredData(filteredCopy);
-  }, [categories, collection]);
+  }, [categories, sizes, collection]);
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 mb-10'>
@@ -53,6 +72,7 @@ const Collections = () => {
           </span>
         </p>
 
+        {/* Category filter */}
         <div
           className={`border border-gray-400 pl-5 py-3 mt-6 ${
             showFilters ? '' : 'hidden'
@@ -61,36 +81,79 @@ const Collections = () => {
           <p className='mb-3 text-sm font-bold'>Categories</p>
           <div className='flex flex-col gap-2'>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Business Card' onChange={filterItems} />
+              <input type='checkbox' value='Business Card' onChange={filterCategory} />
               BusinessCard
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Certificate' onChange={filterItems} />
+              <input type='checkbox' value='Certificate' onChange={filterCategory} />
               Certificate
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Document File' onChange={filterItems} />
+              <input type='checkbox' value='Document File' onChange={filterCategory} />
               DocumentFile
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Document Gag' onChange={filterItems} />
+              <input type='checkbox' value='Document Gag' onChange={filterCategory} />
               DocumentGag
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Strip File' onChange={filterItems} />
+              <input type='checkbox' value='Strip File' onChange={filterCategory} />
               StripFile
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='File_Folder' onChange={filterItems} />
+              <input type='checkbox' value='File_Folder' onChange={filterCategory} />
               File Folder
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Display Book' onChange={filterItems} />
+              <input type='checkbox' value='Display Book' onChange={filterCategory} />
               DisplayBook
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Others' onChange={filterItems} />
+              <input type='checkbox' value='Others' onChange={filterCategory} />
               Others
+            </label>
+          </div>
+        </div>
+
+        {/* Size filter */}
+        <div
+          className={`border border-gray-400 pl-5 py-3 mt-6 ${
+            showFilters ? '' : 'hidden'
+          } sm:block`}
+        >
+          <p className='mb-3 text-sm font-bold'>Sizes</p>
+          <div className='flex flex-col gap-2'>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='A/7' onChange={filterSize} />
+              A/7
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='A/6' onChange={filterSize} />
+              A/6
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='A/5' onChange={filterSize} />
+              A/5
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='A/4' onChange={filterSize} />
+              A/4
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='A/3' onChange={filterSize} />
+              A/3
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='A/2' onChange={filterSize} />
+              A/2
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='A/1' onChange={filterSize} />
+              A/1
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='F/C' onChange={filterSize} />
+              F/C
             </label>
           </div>
         </div>
@@ -99,7 +162,12 @@ const Collections = () => {
       {/* Product Grid */}
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4'>
         {filteredData.map((item, index) => (
-          <Productitem key={index} id={item._id} name={item.name} image={item.image} />
+          <Productitem
+            key={index}
+            id={item._id}
+            name={item.name}
+            image={item.image}
+          />
         ))}
       </div>
     </div>
