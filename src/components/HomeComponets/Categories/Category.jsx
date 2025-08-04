@@ -2,7 +2,7 @@ import React from 'react';
 import './Category.css';
 import { categories } from '../../../assets/assets';
 
-const Category = ({ isActive, setIsActive }) => {
+const Category = ({ isActive, setIsActive, sizes, setSizes }) => {
   return (
     <div className='flex flex-col justify-center items-center mt-5 px-4'>
 
@@ -30,11 +30,19 @@ const Category = ({ isActive, setIsActive }) => {
                   isActive === item.name ? 'active' : ''
                 }`}
               />
+              <div>
+                
+              </div>
               <p className="text-sm md:text-base text-center">{item.name}</p>
             </div>
           );
         })}
+  
       </div>
+      <div>
+      </div>
+      <div><input type="" /></div>
+
       <hr className='w-full mt-3' />
     </div>
   );

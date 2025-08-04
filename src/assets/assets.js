@@ -69,55 +69,85 @@ import ot_5 from './ot_5.webp';
 
 
 export const categories = [
-    {
-        _id: 1,
-        name:"Bussiness Card",
-        image: c_1
+  {
+    _id: 1,
+    name: "Bussiness Card",
+    image: c_1
 
-    },
-    {
-        _id: 2,
-        name:"Certificate",
-        image: c_2
+  },
+  {
+    _id: 2,
+    name: "Certificate",
+    image: c_2
 
-    },
-    {
-        _id: 3,
-        name:"Document File",
-        image: c_3
+  },
+  {
+    _id: 3,
+    name: "Document File",
+    image: c_3
 
-    },
-    {
-        _id: 4,
-        name:"Document Gag",
-        image: c_4
+  },
+  {
+    _id: 4,
+    name: "Document Gag",
+    image: c_4
 
-    },
-    {
-        _id: 5,
-        name:"Strip File",
-        image: c_5
+  },
+  {
+    _id: 5,
+    name: "Strip File",
+    image: c_5
 
-    },
-    {
-        _id: 6,
-        name:"File_Folder",
-        image: c_6
+  },
+  {
+    _id: 6,
+    name: "File_Folder",
+    image: c_6
 
-    },
-    {
-        _id: 7,
-        name:"Display Book",
-        image: c_7
+  },
+  {
+    _id: 7,
+    name: "Display Book",
+    image: c_7
 
-    },
-    {
-        _id: 8,
-        name:"Others",
-        image: c_7
+  },
+  {
+    _id: 8,
+    name: "Others",
+    image: c_7
 
-    }
+  }
 
+]
+export const sizes = [
+  {
+    _id: 1,
+    name: "A/1"
+  },
+  {
+    _id: 2,
+    name: "A/2"
+  },
+  {
+    _id: 3,
+    name: "A/3"
+  },
+  {
+    _id: 4,
+    name: "A/4"
+  },
+  {
+    _id: 5,
+    name: "A/5"
+  },
+  {
+    _id: 6,
+    name: "A/6"
+  },
+  {
+    _id: 7,
+    name: "F/C"
+  }
 
 ]
 
@@ -130,7 +160,9 @@ export const collection = [
     categories: "Document File",
     description: "Durable button file for storing important papers securely.",
     price: 25,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/1",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -141,7 +173,9 @@ export const collection = [
     categories: "Document File",
     description: "Button file with internal pocket for organizing extra sheets.",
     price: 30,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/2",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -152,7 +186,9 @@ export const collection = [
     categories: "Document File",
     description: "A3 size button file ideal for larger documents and charts.",
     price: 35,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/3",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -163,7 +199,9 @@ export const collection = [
     categories: "Document File",
     description: "Spring clip file to hold papers without punching holes.",
     price: 28,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/4",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -174,7 +212,9 @@ export const collection = [
     categories: "Document File",
     description: "Multi-functional file with both button and clip options.",
     price: 32,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/5",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -185,7 +225,9 @@ export const collection = [
     categories: "Document File",
     description: "High-quality file with clip for better document security.",
     price: 32,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/6",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -196,7 +238,9 @@ export const collection = [
     categories: "Document File",
     description: "Sleek design with sturdy clip and button enclosure.",
     price: 32,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/7",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -207,7 +251,9 @@ export const collection = [
     categories: "Document File",
     description: "Ideal for office and academic document storage.",
     price: 32,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/1",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -218,7 +264,9 @@ export const collection = [
     categories: "Document File",
     description: "Premium plastic build for daily usage.",
     price: 32,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/2",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -229,7 +277,9 @@ export const collection = [
     categories: "Document File",
     description: "Two-pocket file to separate and organize documents easily.",
     price: 40,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/3",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -240,7 +290,8 @@ export const collection = [
     categories: "Strip File",
     description: "Simple and cost-effective file for quick document access.",
     price: 15,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/4",
     model: "Default",
     brand: "Hitech"
   },
@@ -251,7 +302,8 @@ export const collection = [
     categories: "Strip File",
     description: "Lightweight file with flexible strip mechanism.",
     price: 15,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/5",
     model: "Default",
     brand: "Hitech"
   },
@@ -262,7 +314,9 @@ export const collection = [
     categories: "Strip File",
     description: "Available in multiple colors, great for filing reports.",
     price: 15,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/6",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -273,7 +327,9 @@ export const collection = [
     categories: "Strip File",
     description: "Economical option for organizing bulk paperwork.",
     price: 15,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/7",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -284,7 +340,9 @@ export const collection = [
     categories: "Strip File",
     description: "Durable and practical strip file with smooth finish.",
     price: 15,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/1",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -295,7 +353,9 @@ export const collection = [
     categories: "File_Folder",
     description: "Standard file folder with sturdy spine and labels.",
     price: 20,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/2",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -306,7 +366,9 @@ export const collection = [
     categories: "File_Folder",
     description: "Perfect for legal documents and long reports.",
     price: 20,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/3",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -317,7 +379,9 @@ export const collection = [
     categories: "File_Folder",
     description: "Quality folder for day-to-day document handling.",
     price: 20,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/4",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -328,7 +392,9 @@ export const collection = [
     categories: "File_Folder",
     description: "Designed with ergonomic grip and smart labels.",
     price: 20,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/5",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -339,7 +405,9 @@ export const collection = [
     categories: "File_Folder",
     description: "Heavy-duty material for long-term usage.",
     price: 22,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/6",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -350,7 +418,9 @@ export const collection = [
     categories: "File_Folder",
     description: "Ideal for student projects and business files.",
     price: 22,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/7",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -361,7 +431,9 @@ export const collection = [
     categories: "File_Folder",
     description: "Modern design with ample capacity.",
     price: 22,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/1",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -372,7 +444,9 @@ export const collection = [
     categories: "File_Folder",
     description: "Folder with durable spine and easy-open clasp.",
     price: 22,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/2",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -383,7 +457,9 @@ export const collection = [
     categories: "Document Gag",
     description: "Unique design for document bundling.",
     price: 18,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/3",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -394,9 +470,12 @@ export const collection = [
     categories: "Document Gag",
     description: "Keeps documents tight and safe.",
     price: 18,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/4",
+
     model: "Default",
     brand: "Hitech"
+
   },
   {
     _id: 26,
@@ -405,7 +484,9 @@ export const collection = [
     categories: "Document Gag",
     description: "Durable elastic for flexible document handling.",
     price: 18,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/5",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -416,7 +497,9 @@ export const collection = [
     categories: "Document Gag",
     description: "Compact and easy to use for small stacks.",
     price: 18,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/6",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -427,7 +510,10 @@ export const collection = [
     categories: "Certificate",
     description: "Elegant folder to protect and showcase certificates.",
     price: 50,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/7",
+
+
     model: "Default",
     brand: "Hitech"
   },
@@ -438,7 +524,9 @@ export const collection = [
     categories: "Certificate",
     description: "Premium finish certificate folder for formal use.",
     price: 55,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/7",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -449,7 +537,9 @@ export const collection = [
     categories: "Certificate",
     description: "Hardbound cover for important awards and diplomas.",
     price: 55,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/2",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -460,7 +550,9 @@ export const collection = [
     categories: "Display Book",
     description: "Book-style file with transparent sleeves.",
     price: 60,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/3",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -471,7 +563,9 @@ export const collection = [
     categories: "Others",
     description: "Miscellaneous stationery storage product.",
     price: 25,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/4",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -482,7 +576,9 @@ export const collection = [
     categories: "Others",
     description: "Multi-use item for various filing needs.",
     price: 25,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/5",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -493,7 +589,9 @@ export const collection = [
     categories: "Others",
     description: "Affordable option for general use.",
     price: 20,
-    size: ["A/1","A/2","A/3", "A/4", "A/5", "A/6"],
+    size: ["A/1", "A/2", "A/3", "A/4", "A/5", "A/6"],
+    sizes: "A/6",
+
     model: "Default",
     brand: "Hitech"
   },
@@ -504,7 +602,8 @@ export const collection = [
     categories: "Others",
     description: "Simple and reusable storage solution.",
     price: 20,
-    sizes : ['A/7', 'A/6', 'A/5', 'A/4', 'A/3', 'F/C'],
+    size: ['A/7', 'A/6', 'A/5', 'A/4', 'A/3', 'F/C'],
+    sizes: "A/7",
     model: "Default",
     brand: "Hitech"
   },
@@ -515,9 +614,9 @@ export const collection = [
     categories: "Others",
     description: "Useful item for students and professionals alike.",
     price: 22,
-    sizes : ['A/7', 'A/6', 'A/5', 'A/4', 'A/3', 'F/C'],
+    size: ['A/7', 'A/6', 'A/5', 'A/4', 'A/3', 'F/C'],
 
-    size: "F/C",
+    sizes: "F/C",
     model: "Default",
     brand: "Hitech"
   }
@@ -529,17 +628,17 @@ export const collection = [
 
 
 export const assets = {
-    logo,
-    hero_b1,
-    hero_b2,
-    hero_b3,
-    hero_b4,
-    s_1,
-    s_2,
-    s_3,
-    F_1,
-    F_2,
-    F_3,
-    ab_b,
-    conatct
+  logo,
+  hero_b1,
+  hero_b2,
+  hero_b3,
+  hero_b4,
+  s_1,
+  s_2,
+  s_3,
+  F_1,
+  F_2,
+  F_3,
+  ab_b,
+  conatct
 }
