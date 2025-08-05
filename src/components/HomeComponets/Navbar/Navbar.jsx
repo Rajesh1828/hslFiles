@@ -75,10 +75,9 @@ const Navbar = () => {
           <li><NavLink to="/gallery" className={navLinkClass}>Gallery</NavLink></li>
 
           {/* Categories with Dropdown */}
-          <li className="relative group">
+          {/* <li className="relative group">
             <NavLink to="/categories" className={navLinkClass}>Categories ▼ </NavLink>
 
-            {/* Dropdown menu */}
             <ul className="absolute top-full left-0 z-50 w-48 bg-white shadow-md rounded-md hidden group-hover:block">
               {[
                 'Button-Files', 'Strip-files', 'Binder-files', 'Zip-files', 'Check-book holders',
@@ -95,7 +94,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-          </li>
+          </li> */}
         </ul>
 
 
@@ -130,7 +129,7 @@ const Navbar = () => {
     <NavLink to="/gallery" className="mobile-link" onClick={closeMenu}>Gallery</NavLink>
 
     {/* Categories with dropdown */}
-    <div className="relative">
+    {/* <div className="relative">
       <div
         onClick={() => setShowCategoryDropdown(prev => !prev)}
         className="mobile-link cursor-pointer flex justify-between items-center"
@@ -158,7 +157,7 @@ const Navbar = () => {
           ))}
         </ul>
       )}
-    </div>
+    </div> */}
   </div>
 </div>
 

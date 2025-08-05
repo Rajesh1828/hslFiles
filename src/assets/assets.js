@@ -59,6 +59,12 @@ import ot_2 from './ot_2.webp';
 import ot_3 from './ot_3.webp';
 import ot_4 from './ot_4.webp';
 import ot_5 from './ot_5.webp';
+import g_1 from './g_1.jpg';
+import g_2 from './g_2.jpg';
+import g_3 from './g_3.jpg';
+import g_4 from './g_4.jpg';
+import g_5 from './g_5.jpg';
+import g_6 from './g_6.jpg';
 
 
 
@@ -640,5 +646,12 @@ export const assets = {
   F_2,
   F_3,
   ab_b,
-  conatct
+  conatct,
+  g_1,
+  g_2,
+  g_3,
+  g_4,
+  g_5,
+  g_6,
+  
 }

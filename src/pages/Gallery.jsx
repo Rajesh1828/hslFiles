@@ -1,8 +1,11 @@
 import React from 'react'
+import GalleryHero from '../components/GalleryComponents/GalleryHero'
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <div>
+      <GalleryHero/>
+    </div>
   )
 }
 
