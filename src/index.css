@@ -43,3 +43,12 @@ body{
   font-optical-sizing: auto;
 
 }
+
+ .scroll-over{
+  overflow-x: scroll;
+  
+ }
+
+ .scroll-over::-webkit-scrollbar{
+  display: none;
+ }
