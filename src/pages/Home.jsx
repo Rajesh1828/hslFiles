@@ -9,14 +9,14 @@ import NewLetter from '../components/HomeComponets/NewsLetter/NewLetter';
 
 const Home = () => {
   const [isActive, setIsActive] = useState("All");
-  const [sizes, setSizes] = useState([]);
+  const [selectedSize, setSelectedSize] = useState("");
 
   return (
     <>
       <Hero />
       <NewArrivels />
-      <Category isActive={isActive} setIsActive={setIsActive} sizes={sizes} setSizes={setSizes} />
-      <ProductDisplay isActive={isActive} sizes={sizes} />
+      <Category isActive={isActive} setIsActive={setIsActive} selectedSize={selectedSize} setSelectedSize={setSelectedSize} />
+      <ProductDisplay isActive={isActive} selectedSize={selectedSize}/>
       <AboutOverView />
       <Grid />
       <NewLetter />
