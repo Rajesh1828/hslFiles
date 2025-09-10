@@ -56,3 +56,13 @@
   padding: 10px 20px;
   border-radius: 8px;
 }
+
+
+
+/* ✅ Responsive styles */
+@media screen and (max-width: 768px) {
+  .slide-text {
+    font-size: 1.5rem;
+  }
+}
+
