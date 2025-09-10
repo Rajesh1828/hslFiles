@@ -28,10 +28,10 @@ const Hero = () => {
         <SwiperSlide><img src={assets.hero_b1} alt="Hitech-Files1" />
         
         </SwiperSlide>
-        <SwiperSlide><img src={assets.hero_b2} alt="Hitech-Files2" /></SwiperSlide>
-        <SwiperSlide><img src={assets.hero_b3} alt="Hitech-Files3" /></SwiperSlide>
-        <SwiperSlide><img src={assets.hero_b4} alt="Hitech-Files4" /></SwiperSlide>
-        <SwiperSlide><img src={assets.hero_b1} alt="Hitech-Files1 repeat" /></SwiperSlide>
+        <SwiperSlide><img src={assets.HeroBanner2} alt="Hitech-Files2" /></SwiperSlide>
+        {/* <SwiperSlide><img src={assets.hero_b3} alt="Hitech-Files3" /></SwiperSlide> */}
+        <SwiperSlide><img src={assets.HeroBanner4} alt="Hitech-Files4" /></SwiperSlide>
+        <SwiperSlide><img src={assets.HeroBanner3} alt="Hitech-Files1 repeat" /></SwiperSlide>
       </Swiper>
     </div>
   );

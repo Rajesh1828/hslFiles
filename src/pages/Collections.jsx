@@ -7,16 +7,16 @@ const Collections = () => {
 
   const [showFilters, setShowFilters] = useState(false);
   const [filteredData, setFilteredData] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState([]);
   const [sizes, setSizes] = useState([]);
 
   // Category checkbox handler
   const filterCategory = (e) => {
     const value = e.target.value;
-    if (categories.includes(value)) {
-      setCategories((prev) => prev.filter((item) => item !== value));
+    if (category.includes(value)) {
+      setCategory((prev) => prev.filter((item) => item !== value));
     } else {
-      setCategories((prev) => [...prev, value]);
+      setCategory((prev) => [...prev, value]);
     }
   };
 
@@ -39,9 +39,9 @@ const Collections = () => {
   useEffect(() => {
     let filteredCopy = collection.slice();
 
-    if (categories.length > 0) {
+    if (category.length > 0) {
       filteredCopy = filteredCopy.filter((item) =>
-        categories.includes(item.categories)
+        category.includes(item.category?.toLowerCase())
       );
     }
 
@@ -52,7 +52,7 @@ const Collections = () => {
     }
 
     setFilteredData(filteredCopy);
-  }, [categories, sizes, collection]);
+  }, [category, sizes, collection]);
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 mb-10'>
@@ -93,11 +93,11 @@ const Collections = () => {
               DocumentFile
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Document Gag' onChange={filterCategory} />
-              DocumentGag
+              <input type='checkbox' value='documentbag' onChange={filterCategory} />
+              DocumentBag
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Strip File' onChange={filterCategory} />
+              <input type='checkbox' value='stripfiles' onChange={filterCategory} />
               StripFile
             </label>
             <label className='flex gap-2'>
@@ -117,7 +117,7 @@ const Collections = () => {
 
         {/* Size filter */}
         <div
-          className={`border border-gray-400 pl-5 py-3 mt-6 ${
+          className={`border border-gray-400 pl-5  ${
             showFilters ? '' : 'hidden'
           } sm:block`}
         >
@@ -166,7 +166,7 @@ const Collections = () => {
             key={index}
             id={item._id}
             name={item.name}
-            image={item.image}
+            images={item.images}
           />
         ))}
       </div>

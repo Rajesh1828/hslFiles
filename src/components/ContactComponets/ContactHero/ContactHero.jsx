@@ -18,9 +18,9 @@ const ContactHero = () => {
       {/* Hero Section */}
       <div className="relative bg-black">
         <img
-          src='' // use fallback if contactHero not available
+          src={assets.HeroBanner} // use fallback if contactHero not available
           alt="Contact Banner"
-          className="w-full h-[350px] object-cover border-none outline-none shadow-none"
+          className="w-full h-[400px] border-none outline-none shadow-none"
         />
 
         {/* Overlay Heading */}

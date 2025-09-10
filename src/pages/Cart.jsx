@@ -52,7 +52,7 @@ const Cart = () => {
                 <div className='flex items-center gap-4 sm:col-span-1'>
                   <img
                     className='w-16 h-16 object-cover rounded'
-                    src={item.image}
+                    src={item.images}
                     alt={item.name}
                   />
                   <div className='w-full break-words'>

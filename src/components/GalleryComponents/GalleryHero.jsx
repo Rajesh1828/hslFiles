@@ -16,8 +16,8 @@ const GalleryHero = () => {
     <div className="relative">
       {/* Hero Image with overlay */}
       <div className="relative">
-        <img src={assets.ab_b} className="w-full h-[350px] object-cover" alt="hero" />
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <img src={assets.HeroBanner} className="w-full h-[350px] " alt="hero" />
+        <div className="absolute inset-0 bg-opacity-40"></div>
 
         {/* Centered Text */}
         <div className="absolute inset-x-0 top-[150px] flex flex-col items-center justify-center text-white px-4 text-center">

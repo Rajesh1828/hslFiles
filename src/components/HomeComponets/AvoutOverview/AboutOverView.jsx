@@ -13,7 +13,7 @@ const AboutOverView = () => {
     </div>
     <div className='flex flex-col md:flex-row justify-evenly items-center w-full gap-19'>
       <div className='md:w-1/2 px-10 md:py-10 py-5'>
-        <img src={assets.F_1} alt="" className='w-full' />
+        <img src={assets.about_blog_banner} alt="" className='w-full' />
       </div>
       <div className='md:w-1/2 w-full'>
       <h2 className='text-xl md:text-3xl font-bold md:px-10 px-5'>"Write Bold. Plan Smart. Live Inspired."
