@@ -92,7 +92,7 @@ import scribbling_books from './scribbling_books.png';
 import security_bags from './security_bags.png';
 import sheet_protectors from './sheet_protectors.png';
 import spirac_books from './spirac_books.png';
-import spiral_books from './Spiral-books.jpg';
+import spiral_books from './Spiral-Books.jpg';
 import strip_files from './strip_files.png';
 import zip_files from './Zip-files.png';
 import zipper_bags from './zipper_bags.png';
