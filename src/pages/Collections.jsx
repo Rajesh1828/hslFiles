@@ -36,23 +36,27 @@ const Collections = () => {
   }, [collection]);
 
   // Filtering logic
-  useEffect(() => {
-    let filteredCopy = collection.slice();
+useEffect(() => {
+  let filteredCopy = collection.slice();
 
-    if (category.length > 0) {
-      filteredCopy = filteredCopy.filter((item) =>
-        category.includes(item.category?.toLowerCase())
-      );
-    }
+  // Filter by category
+  if (category.length > 0) {
+    filteredCopy = filteredCopy.filter((item) =>
+      category.includes(item.category?.toLowerCase())
+    );
+  }
 
-    if (sizes.length > 0) {
-      filteredCopy = filteredCopy.filter((item) =>
-        sizes.includes(item.sizes)
-      );
-    }
+  // ✅ Filter by sizes (check if any selected size is in item.sizes)
+  if (sizes.length > 0) {
+    filteredCopy = filteredCopy.filter(
+      (item) =>
+        Array.isArray(item.sizes) && item.sizes.some((sz) => sizes.includes(sz))
+    );
+  }
 
-    setFilteredData(filteredCopy);
-  }, [category, sizes, collection]);
+  setFilteredData(filteredCopy);
+}, [category, sizes, collection]);
+
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 mb-10'>
@@ -81,15 +85,15 @@ const Collections = () => {
           <p className='mb-3 text-sm font-bold'>Categories</p>
           <div className='flex flex-col gap-2'>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Business Card' onChange={filterCategory} />
+              <input type='checkbox' value='BusinessCard' onChange={filterCategory} />
               BusinessCard
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Certificate' onChange={filterCategory} />
+              <input type='checkbox' value='certificates' onChange={filterCategory} />
               Certificate
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Document File' onChange={filterCategory} />
+              <input type='checkbox' value='DocumentFile' onChange={filterCategory} />
               DocumentFile
             </label>
             <label className='flex gap-2'>
@@ -101,11 +105,11 @@ const Collections = () => {
               StripFile
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='File_Folder' onChange={filterCategory} />
+              <input type='checkbox' value='FileFolder' onChange={filterCategory} />
               File Folder
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Display Book' onChange={filterCategory} />
+              <input type='checkbox' value='displaybook' onChange={filterCategory} />
               DisplayBook
             </label>
             <label className='flex gap-2'>
@@ -124,31 +128,31 @@ const Collections = () => {
           <p className='mb-3 text-sm font-bold'>Sizes</p>
           <div className='flex flex-col gap-2'>
             <label className='flex gap-2'>
-              <input type='checkbox' value='A/7' onChange={filterSize} />
+              <input type='checkbox' value='A7' onChange={filterSize} />
               A/7
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='A/6' onChange={filterSize} />
+              <input type='checkbox' value='A6' onChange={filterSize} />
               A/6
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='A/5' onChange={filterSize} />
+              <input type='checkbox' value='A5' onChange={filterSize} />
               A/5
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='A/4' onChange={filterSize} />
+              <input type='checkbox' value='A4' onChange={filterSize} />
               A/4
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='A/3' onChange={filterSize} />
+              <input type='checkbox' value='A3' onChange={filterSize} />
               A/3
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='A/2' onChange={filterSize} />
+              <input type='checkbox' value='A2' onChange={filterSize} />
               A/2
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='A/1' onChange={filterSize} />
+              <input type='checkbox' value='A1' onChange={filterSize} />
               A/1
             </label>
             <label className='flex gap-2'>

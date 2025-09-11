@@ -116,7 +116,7 @@ const Product = () => {
           <div className="flex mt-5 gap-3 flex-wrap">
             {/* WhatsApp Order Button */}
             <a
-              href="https://wa.me/919876543210?text=Hi%20there%2C%20I%20want%20to%20place%20an%20order."
+              href="https://wa.me/9032181871?text=Hi%20there%2C%20I%20want%20to%20place%20an%20order."
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 cursor-pointer bg-black text-gray-200 py-2 border-2 border-gray-900 rounded-xl flex items-center gap-2"
@@ -165,7 +165,7 @@ const Product = () => {
       {/* Related Products */}
       <div className='flex'>
         {/* Using product.category instead of product.categories because backend sends "category" */}
-        <RelatedProducts categories={product.category} />
+        <RelatedProducts category={product.category} />
       </div>
     </div>
   );

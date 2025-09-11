@@ -24,14 +24,12 @@ const ContactHero = () => {
         />
 
         {/* Overlay Heading */}
-        <div className="absolute inset-x-0 top-[150px] flex flex-col items-center text-white px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold gradient-text">Contact</h2>
+        <div className="absolute inset-x-0 top-[150px] flex flex-col items-center text-black px-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold ">Contact</h2>
           <h3 className="text-xl md:text-2xl mt-2 font-semibold inter">
             Make a call request for more information
           </h3>
-          <p className="text-sm md:text-base mt-2 max-w-2xl inter">
-            Looking for custom solutions or want to collaborate? Get in touch with our team today and let's make something great together.
-          </p>
+     
               <div className="mt-6 animate-bounce">
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2"
               viewBox="0 0 24 24">
