@@ -3,12 +3,12 @@ import { assets } from '../../assets/assets';
 import { motion } from 'framer-motion';
 
 const imageGrid = [
-  assets.gallery1,
-  assets.gallery2,
-  assets.gallery3,
-  assets.gallery4,
-  assets.gallery5,
-  assets.gallery6,
+  assets.document_bags,
+  assets.pocket_books,
+  assets.scribbling_books,
+  assets.zip_files,
+  assets.zipper_bags,
+  assets.sheet_protectors
 ];
 
 const GalleryHero = () => {
