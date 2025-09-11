@@ -2,13 +2,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import { FileContext } from '../../../Context/FileContext'
 import Productitem from '../ProductItems/Productitem'
 
-const RelatedProducts = ({  categories}) => {
+const RelatedProducts = ({  category}) => {
     const{collection}= useContext(FileContext)
     const[relatedProducts, setRelatedProducts] = useState([])
     useEffect(()=>{
         if(collection.length>0){
             let productsCopy = collection.slice();
-            productsCopy = productsCopy.filter((item)=>categories === item.categories);
+            productsCopy = productsCopy.filter((item)=>category === item.category);
             setRelatedProducts(productsCopy.slice(0,5));
         }
     },[collection])

@@ -55,11 +55,11 @@ const Navbar = () => {
       <div className="flex justify-between items-center bg-black text-white px-6 py-3 text-[12px] font-semibold">
         <div className="flex items-center gap-2">
           <Phone className="w-4 h-4" />
-          <span>+91 9999999999</span>
+          <span>+91 98491 86401</span>
         </div>
         <div className="flex items-center gap-2">
           <Mail className="w-4 h-4" />
-          <span>hitechfiles@gmail.com</span>
+          <span> srijayadurgaenterprises2000@gmail.com</span>
         </div>
       </div>
 

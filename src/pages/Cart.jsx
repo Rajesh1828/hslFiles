@@ -23,7 +23,34 @@ const Cart = () => {
       }
     }
     setCartData(tempData);
-  }, [cartItems]);
+  }, [cartItems, collection]);
+
+  // ✅ Handle WhatsApp message
+  const handleWhatsApp = () => {
+    if (cartData.length === 0) return;
+
+    let message = `🛒 *My Cart Items* 🛒\n\n`;
+    cartData.forEach((item, idx) => {
+      message += `${idx + 1}. ${item.name} (${item.size})\nQty: ${item.quantity}\nPrice: ${currency}${item.price}\nSubtotal: ${currency}${item.price * item.quantity}\n\n`;
+    });
+
+    const total = cartData.reduce((sum, i) => sum + i.price * i.quantity, 0);
+    message += `-------------------\nTotal: ${currency}${total}`;
+
+    // Replace with your WhatsApp number (with country code, no + or spaces)
+    const phoneNumber = "9032181871"; 
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+
+    // ✅ Clear cart after sending
+    cartData.forEach((item) => {
+      updateQuantity(item._id, item.size, 0);
+    });
+
+    setCartData([]); // clear local state
+  };
+
 
   return (
     <div className='border-t pt-24 px-2 sm:px-4'>
@@ -97,6 +124,16 @@ const Cart = () => {
               </div>
             );
           })}
+
+          {/* ✅ WhatsApp Button */}
+          <div className="flex justify-center mt-6 mb-4">
+            <button
+              onClick={handleWhatsApp}
+              className="bg-green-300 hover:bg-green-600 text-white px-6 py-2 rounded-lg shadow-md font-semibold transition"
+            >
+              Send Cart via WhatsApp
+            </button>
+          </div>
         </div>
       ) : (
         <div className='text-center text-gray-600 text-sm sm:text-lg mt-10'>

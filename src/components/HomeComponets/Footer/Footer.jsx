@@ -1,16 +1,17 @@
 import React from 'react';
 import './Footer.css';
 import { assets } from '../../../assets/assets';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-       <footer class="relative w-full py-5 bg-gradient-to-tl from-white via-gray-400 to-slate-100">
+       <footer class="relative w-full py-5 bg-gradient-to-tl from-slate-200 via-gray-400 to-slate-500">
   <div class="w-full px-8 mx-auto max-w-7xl">
     <div class="grid justify-between grid-cols-1 gap-4 md:grid-cols-2">
         <div className='flex flex-col justify-start items-start'>
      <img src={assets.logo} className='w-40' alt="" />
-     <p className='mt-2 text-base'>91-999999999</p>
-     <p className='mt-2 text-base'>jLj0g@example.com</p>
+     <p className='mt-2 text-base'>+91 98491 86401</p>
+     <p className='mt-2 text-base'>srijayadurgaenterprises2000@gmail.com</p>
 
         </div>
      
@@ -19,26 +20,35 @@ const Footer = () => {
           <p class="block mb-1 text-base font-semibold  text-slate-800">
             Quick  Links
           </p>
+
+          <Link to="about"> 
           <li>
             <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
               About
             </a>
           </li>
+          </Link>
+          <Link to="gallery">
           <li>
             <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
               Gallery
             </a>
           </li>
+          </Link>
+          <Link to="/">
           <li>
             <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-Home
+            Home
             </a>
           </li>
+          </Link>
+          <Link to="contact">
           <li>
             <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
               Contact
             </a>
           </li>
+          </Link>
         </ul>
         <ul>
           <p class="block mb-1 text-base font-semibold text-slate-800">
@@ -65,35 +75,14 @@ Home
             </a>
           </li>
         </ul>
-        {/* <ul>
-          <p class="block mb-1 text-base font-semibold text-slate-800">
-            Resource
-          </p>
-          <li>
-            <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-              Newsletter
-            </a>
-          </li>
-          <li>
-            <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-              Events
-            </a>
-          </li>
-          <li>
-            <a href="#" class="block text-slate-600 py-1 hover:text-slate-500 focus:text-slate-500 text-sm">
-              Help center
-            </a>
-          </li>
-        </ul> */}
+         <div>
+
+          <p>About Us</p>
+         </div>
       </div>
     </div>
     <div class="flex flex-col items-center justify-center w-full py-4 mt-12 border-t border-slate-200 md:flex-row md:justify-between">
-      <p class="block mb-4 text-sm text-center text-slate-500 md:mb-0">
+      <p class="block mb-4 text-sm text-center text-white md:mb-0">
         Copyright © 2024 
         <a href="#">Hitech</a>. All
         Rights Reserved. Powered by Dad The Ad
