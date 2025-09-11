@@ -21,9 +21,9 @@ const AboutOverView = () => {
 </h2>
 <div className='mt-5 flex flex-col gap-3 px-5 md:px-10 md:py-10'>
 
-        <p className=' text-justify'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis assumenda in, sequi nisi sapiente eum aut tenetur ab neque. Ipsa quis omnis quam quaerat a doloribus. Reprehenderit nihil tempore saepe.</p>
-        <p className=' text-justify'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae ipsa, adipisci asperiores cum maiores voluptates! Error sit dolores inventore facilis, fuga dolorum nisi architecto repellendus porro sunt voluptates esse exercitationem.</p>
-        <p className=' text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente repellendus nisi, cumque, nesciunt harum error ea ullam quis autem sit delectus temporibus officiis eveniet possimus natus veritatis ratione? Eligendi, quia!
+        <p className=' text-justify'>Hitech Stationery Files is your trusted destination for premium files and office organization products. We specialize in a wide range of stationery solutions, including document bags, file folders, clip files, display books, and more — all crafted for durability and everyday convenience </p>
+        <p className=' text-justify'>Whether you’re managing personal paperwork or keeping your workplace organized, Hitech Stationery Files offers products designed to keep your documents neat, secure, and easy to access. Our commitment to quality ensures that every file, folder, or storage solution meets the highest standards, giving you excellent value for money</p>
+        <p className=' text-justify'>From lightweight plastic folders to heavy-duty office files, we make it simple to find the right tools to streamline your workspace. Choose Hitech Stationery Files for organization made easy — stylish, practical, and built to last.
         </p>
 </div>
       </div>
