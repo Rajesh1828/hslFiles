@@ -109,12 +109,36 @@ useEffect(() => {
               File Folder
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='displaybook' onChange={filterCategory} />
-              DisplayBook
+              <input type='checkbox' value='clothcovers' onChange={filterCategory} />
+              cloth covers
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='Others' onChange={filterCategory} />
-              Others
+              <input type='checkbox' value='sheetprotectors' onChange={filterCategory} />
+              Sheet Protectors
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='reportfiles' onChange={filterCategory} />
+              Report Files
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='expandingfiles(visa)' onChange={filterCategory} />
+              Expanding Files (Visa)
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='l.shapefolders' onChange={filterCategory} />
+              L-Shape Folders
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='transparentpouches' onChange={filterCategory} />
+              Transparent Pouches
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='toporsideopenpouches' onChange={filterCategory} />
+              Top or Side Open Pouches
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='clothpouches' onChange={filterCategory} />
+              Cloth Pouches
             </label>
           </div>
         </div>
@@ -152,8 +176,8 @@ useEffect(() => {
               A/2
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='A1' onChange={filterSize} />
-              A/1
+              <input type='checkbox' value='B5' onChange={filterSize} />
+              B/5
             </label>
             <label className='flex gap-2'>
               <input type='checkbox' value='F/C' onChange={filterSize} />

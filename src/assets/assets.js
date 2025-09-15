@@ -161,6 +161,7 @@ export const category = [
 
 // Example sizes (adjust to your DB values)
 export const sizes = [
+  { _id: 1, name: "A7" },
   { _id: 2, name: "A6" },
   { _id: 3, name: "A5" },
   { _id: 4, name: "A4" },

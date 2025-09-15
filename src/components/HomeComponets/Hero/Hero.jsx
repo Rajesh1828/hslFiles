@@ -14,20 +14,21 @@ const Hero = () => {
     <div className="hero-container">
       <Swiper
         spaceBetween={30}
-        effect={'fade'}
+        effect="fade"
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
-        navigation={true}
+        navigation
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         className="mySwiper"
       >
         <SwiperSlide>
           <div className="slide">
             <img src={assets.hero_b1} alt="Hitech-Files1" />
-            <div className="slide-text">Welcome to Hitech Files
+            <div className="slide-text">
+              Welcome to Hitech Files
               <p>Your One-Stop Solution for All Your Document Needs</p>
             </div>
           </div>
@@ -36,7 +37,8 @@ const Hero = () => {
         <SwiperSlide>
           <div className="slide">
             <img src={assets.HeroBanner2} alt="Hitech-Files2" />
-            <div className="slide-text">Your Documents, Simplified
+            <div className="slide-text">
+              Your Documents, Simplified
               <p>Your One-Stop Solution for All Your Document Needs</p>
             </div>
           </div>
@@ -45,7 +47,8 @@ const Hero = () => {
         <SwiperSlide>
           <div className="slide">
             <img src={assets.HeroBanner4} alt="Hitech-Files4" />
-            <div className="slide-text">Secure. Fast. Reliable.
+            <div className="slide-text">
+              Secure. Fast. Reliable.
               <p>Your One-Stop Solution for All Your Document Needs</p>
             </div>
           </div>
@@ -54,7 +57,8 @@ const Hero = () => {
         <SwiperSlide>
           <div className="slide">
             <img src={assets.HeroBanner3} alt="Hitech-Files3" />
-            <div className="slide-text">Try Hitech Files Today
+            <div className="slide-text">
+              Try Hitech Files Today
               <p>Your One-Stop Solution for All Your Document Needs</p>
             </div>
           </div>
