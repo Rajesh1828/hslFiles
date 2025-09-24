@@ -15,7 +15,7 @@ const Productitem = ({ id, name, images }) => {
                   </div>
             </div>  
             <div className='flex flex-col justify-center items-center'>
-                <h2 className='text-base md:text-md font-xs'>{name}{currency}</h2>
+                <h2 className='text-base md:text-md font-xs'>{name}</h2>
             </div>
             </Link>
 

@@ -55,11 +55,18 @@ const Navbar = () => {
       <div className="flex justify-between items-center bg-black text-white px-6 py-3 text-[12px] font-semibold">
         <div className="flex items-center gap-2">
           <Phone className="w-4 h-4" />
+
           <span className="text-[9px] md:text-[12px] hover:underline">+91 98491 86401</span>
         </div>
         <div className="flex items-center gap-2">
           <Mail className="w-4 h-4" />
           <span className="text-[9px] md:text-[12px] hover:underline"> srijayadurgaenterprises2000@gmail.com</span>
+          <span className='hover:underline text-[9px] md:text-[12px]'>+91 98491 86401</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Mail className="w-4 h-4" />
+          <span className='hover:underline text-[9px] md:text-[12px]'> srijayadurgaenterprises2000@gmail.com</span>
+
         </div>
       </div>
 
