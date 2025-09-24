@@ -102,11 +102,7 @@ import zipper_bags from './zipper_bags.png';
 
 
 
-// assets.js
 
-// ✅ Use "name" to match DB exactly (for filtering)
-// ✅ Use "label" for pretty display in UI
-// ✅ This prevents mismatch like "documentbag" (DB) vs "documentbags" (old asset)
 
 export const category = [
   {

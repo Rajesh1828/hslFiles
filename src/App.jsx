@@ -10,6 +10,8 @@ import Gallery from './pages/Gallery'
 import Footer from './components/HomeComponets/Footer/Footer'
 import { ToastContainer} from 'react-toast'
 import Cart from './pages/Cart'
+import FloatingBtns from './components/FloatingBtns/FloatingBtns'
+import ScrollToTop from './components/ScrollToTop'
 
 const App = () => {
   return (
@@ -17,7 +19,9 @@ const App = () => {
     <div>
       <ToastContainer/>
       <Navbar/>
+      <ScrollToTop/>
       <Routes>
+
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>}/>
         <Route path='/collections' element={<Collections/>}/>
@@ -26,6 +30,7 @@ const App = () => {
         <Route path='/gallery' element={<Gallery/>}/>
         <Route path='/cart' element={<Cart/>}/>
       </Routes>
+      <FloatingBtns/>
       <Footer/>
     
 
