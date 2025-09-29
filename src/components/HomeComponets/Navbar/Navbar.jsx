@@ -58,11 +58,11 @@ const Navbar = () => {
 
           <span className="text-[9px] md:text-[12px] hover:underline">+91 98491 86401</span>
         </div>
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <Mail className="w-4 h-4" />
           <span className="text-[9px] md:text-[12px] hover:underline"> srijayadurgaenterprises2000@gmail.com</span>
           <span className='hover:underline text-[9px] md:text-[12px]'>+91 98491 86401</span>
-        </div>
+        </div> */}
         <div className="flex items-center gap-2">
           <Mail className="w-4 h-4" />
           <span className='hover:underline text-[9px] md:text-[12px]'> srijayadurgaenterprises2000@gmail.com</span>
@@ -71,7 +71,7 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <div className="navbar">
+      <div className="navbar relative top-0 z-50">
         <Link to="/">
           <img src={assets.logo} alt="Hitech-Files" className="logo" />
         </Link>

@@ -16,6 +16,9 @@ import HeroBanner2 from './Stick-Files-Banner.png';
 import HeroBanner3 from './Zip-Files.png';
 import HeroBanner4 from './Spiral-Books.jpg';
 import about_blog_banner from './About_Blog_Banner.png';
+import banner_1 from './banner-1.png';
+import banner_2 from './banner-2.png';
+import banner_3 from './banner-3.png'; 
 
 
 //categories
@@ -104,6 +107,7 @@ import zipper_bags from './zipper_bags.png';
 
 
 
+
 export const category = [
   {
     _id: 1,
@@ -184,6 +188,9 @@ export const assets = {
   hero_b2,
   hero_b3,
   hero_b4,
+  banner_1,
+  banner_2,
+  banner_3,
   s_1,
   s_2,
   s_3,
