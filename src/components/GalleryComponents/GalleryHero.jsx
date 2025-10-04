@@ -75,12 +75,12 @@ const GalleryHero = () => {
       </section>
 
       {/* 📬 Contact Section */}
-      <section className="bg-gradient-to-br from-gray-800 via-gray-900 to-black">
-        <div className="py-12 px-4 mx-auto max-w-screen-md">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
+      <section className="">
+        <div className="py-12 px-4 mb-2 mx-auto max-w-screen-md shadow-md bg-gray-200">
+          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-800">
             Contact Us
           </h2>
-          <p className="mb-8 font-light text-center text-gray-400 sm:text-lg">
+          <p className="mb-8  text-center text-gray-900 sm:text-medium">
             Got a question or feedback? Let us know — we're here to help.
           </p>
           <form className="space-y-6">
@@ -88,12 +88,12 @@ const GalleryHero = () => {
               <input
                 type="email"
                 id="email"
-                className="peer w-full bg-gray-700 text-white placeholder-transparent border border-gray-600 rounded-md px-4 py-2 focus:outline-none focus:border-cyan-400"
+                className="peer w-full bg-gray-100 text-gray-900 placeholder-transparent  rounded-md px-4 py-2 focus:outline-none focus:border-cyan-400"
                 placeholder="Email address"
                 required
               />
               <label htmlFor="email"
-                className="absolute left-4 top-2 text-sm text-gray-400 transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:text-sm peer-focus:text-cyan-300">
+                className="absolute left-4 top-2 text-sm  bg-gray-100 text-gray-900 transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:text-sm peer-focus:text-cyan-300">
                 Your Email
               </label>
             </div>
@@ -102,7 +102,7 @@ const GalleryHero = () => {
               <input
                 type="text"
                 id="subject"
-                className="peer w-full bg-gray-700 text-white placeholder-transparent border border-gray-600 rounded-md px-4 py-2 focus:outline-none focus:border-cyan-400"
+                className="peer w-full bg-gray-100 text-gray-900 placeholder-transparent  rounded-md px-4 py-2 focus:outline-none focus:border-cyan-400"
                 placeholder="Subject"
                 required
               />
@@ -116,7 +116,7 @@ const GalleryHero = () => {
               <textarea
                 id="message"
                 rows="5"
-                className="peer w-full bg-gray-700 text-white placeholder-transparent border border-gray-600 rounded-md px-4 py-2 focus:outline-none focus:border-cyan-400"
+                className="peer w-full bg-gray-100 text-gray-900 placeholder-transparent  rounded-md px-4 py-2 focus:outline-none focus:border-cyan-400"
                 placeholder="Your message"
               ></textarea>
               <label htmlFor="message"

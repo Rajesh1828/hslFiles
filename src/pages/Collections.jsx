@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { FileContext } from '../Context/FileContext';
 import Productitem from '../components/HomeComponets/ProductItems/Productitem';
+import { ChevronUp, ChevronDown } from "lucide-react";
+
 
 const Collections = () => {
   const { collection } = useContext(FileContext);
@@ -36,26 +38,26 @@ const Collections = () => {
   }, [collection]);
 
   // Filtering logic
-useEffect(() => {
-  let filteredCopy = collection.slice();
+  useEffect(() => {
+    let filteredCopy = collection.slice();
 
-  // Filter by category
-  if (category.length > 0) {
-    filteredCopy = filteredCopy.filter((item) =>
-      category.includes(item.category?.toLowerCase())
-    );
-  }
+    // Filter by category
+    if (category.length > 0) {
+      filteredCopy = filteredCopy.filter((item) =>
+        category.includes(item.category?.toLowerCase())
+      );
+    }
 
-  // ✅ Filter by sizes (check if any selected size is in item.sizes)
-  if (sizes.length > 0) {
-    filteredCopy = filteredCopy.filter(
-      (item) =>
-        Array.isArray(item.sizes) && item.sizes.some((sz) => sizes.includes(sz))
-    );
-  }
+    // ✅ Filter by sizes (check if any selected size is in item.sizes)
+    if (sizes.length > 0) {
+      filteredCopy = filteredCopy.filter(
+        (item) =>
+          Array.isArray(item.sizes) && item.sizes.some((sz) => sizes.includes(sz))
+      );
+    }
 
-  setFilteredData(filteredCopy);
-}, [category, sizes, collection]);
+    setFilteredData(filteredCopy);
+  }, [category, sizes, collection]);
 
 
   return (
@@ -69,44 +71,53 @@ useEffect(() => {
           Filters
           <span>
             {showFilters ? (
-              <span className='text-3xl sm:hidden'>👇</span>
+              <span className='text-3xl sm:hidden'>  <ChevronDown /> </span>
             ) : (
-              <span className='text-3xl sm:hidden'>👆</span>
+              <span className='text-3xl sm:hidden'> <ChevronUp /></span>
             )}
           </span>
         </p>
 
         {/* Category filter */}
         <div
-          className={`border border-gray-400 pl-5 py-3 mt-6 ${
-            showFilters ? '' : 'hidden'
-          } sm:block`}
+          className={`border border-gray-400 pl-5 py-3 mt-6 ${showFilters ? '' : 'hidden'
+            } sm:block`}
         >
           <p className='mb-3 text-sm font-bold'>Categories</p>
           <div className='flex flex-col gap-2'>
             <label className='flex gap-2'>
-              <input type='checkbox' value='BusinessCard' onChange={filterCategory} />
-              BusinessCard
+              <input type='checkbox' value='hitechbooks' onChange={filterCategory} />
+              HitechBooks
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='buttonfiles' onChange={filterCategory} />
+              ButtonFiles
             </label>
             <label className='flex gap-2'>
               <input type='checkbox' value='certificates' onChange={filterCategory} />
-              Certificate
+              CertificateFiles
             </label>
+
             <label className='flex gap-2'>
               <input type='checkbox' value='DocumentFile' onChange={filterCategory} />
               DocumentFile
             </label>
+
             <label className='flex gap-2'>
-              <input type='checkbox' value='documentbag' onChange={filterCategory} />
-              DocumentBag
+              <input type='checkbox' value='zipfiles' onChange={filterCategory} />
+              ZipFiles
             </label>
             <label className='flex gap-2'>
               <input type='checkbox' value='stripfiles' onChange={filterCategory} />
               StripFile
             </label>
             <label className='flex gap-2'>
-              <input type='checkbox' value='FileFolder' onChange={filterCategory} />
-              File Folder
+              <input type='checkbox' value='clipFiles' onChange={filterCategory} />
+              Clip Files
+            </label>
+            <label className='flex gap-2'>
+              <input type='checkbox' value='envelops' onChange={filterCategory} />
+              Envelops
             </label>
             <label className='flex gap-2'>
               <input type='checkbox' value='clothcovers' onChange={filterCategory} />
@@ -145,9 +156,8 @@ useEffect(() => {
 
         {/* Size filter */}
         <div
-          className={`border border-gray-400 pl-5  ${
-            showFilters ? '' : 'hidden'
-          } sm:block`}
+          className={`border border-gray-400 pl-5  ${showFilters ? '' : 'hidden'
+            } sm:block`}
         >
           <p className='mb-3 text-sm font-bold'>Sizes</p>
           <div className='flex flex-col gap-2'>
@@ -194,7 +204,7 @@ useEffect(() => {
             key={index}
             id={item._id}
             name={item.name}
-            images={item.images}
+            images={item.images[0] || item.images}
           />
         ))}
       </div>

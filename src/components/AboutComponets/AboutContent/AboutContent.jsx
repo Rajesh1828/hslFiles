@@ -37,10 +37,10 @@ const AboutContent = () => {
                                 ['Nature of Business', 'Wholesaler/Distributor'],
                                 ['Additional Business', 'Wholesale Business, Retail Business'],
                                 ['Company CEO', 'M. Suresh Madisetty'],
-                                ['Total Number of Employees', 'Up to 10 People'],
+                                ['Total Number of Employees', 'Up to 15 People'],
                                 ['GST Registration Date', '01-07-2017'],
                                 ['Legal Status of Firm', 'Proprietorship'],
-                                ['Annual Turnover', '₹40 L – ₹1.5 Cr'],
+                                ['Annual Turnover', '₹2.3cr'],
                                 ['GST Partner Name', 'Suresh Madisetty'],
                             ].map(([field, value], i) => (
                                 <tr key={i} className="even:bg-gray-50">

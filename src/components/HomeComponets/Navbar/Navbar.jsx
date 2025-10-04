@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <Phone className="w-4 h-4" />
 
-          <span className="text-[9px] md:text-[12px] hover:underline">+91 98491 86401</span>
+          <span className="text-[9px] md:text-[12px] hover:underline">+91  98491 86401</span>
         </div>
         {/* <div className="flex items-center gap-2">
           <Mail className="w-4 h-4" />

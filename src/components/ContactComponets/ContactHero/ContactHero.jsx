@@ -72,7 +72,7 @@ const ContactHero = () => {
             <User className="inline w-6 h-6 text-red-700" /> M. Suresh Madisetty
           </p>
           <p className="inter text-lg font-bold">
-            <Phone className="inline w-5 h-5 text-red-700" /> 9849186401
+            <Phone className="inline w-5 h-5 text-red-700" /> +91-9849186401
           </p>
           <p className="inter text-lg font-bold">
             <Mail className="inline w-5 h-5 text-red-700" />{' '}
@@ -80,6 +80,15 @@ const ContactHero = () => {
               srijayadurgaenterprises2000@gmail.com
             </a>
           </p>
+
+            <p>
+              <User className='inline w-6 h-6 text-red-700' />
+              Manger:<b> Vijaya Lakshmi</b>
+            </p>
+            <p className="inter text-lg font-bold">
+            <Phone className="inline w-5 h-5 text-red-700" /> +91-8179537673
+          </p>
+            
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ const RelatedProducts = ({  category}) => {
         </div>
   <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 gap-y-6'>
    {relatedProducts.map((item,index)=>(
-    <Productitem key={index} id={item._id} name={item.name} images={item.images}/>
+    <Productitem key={index} id={item._id} name={item.name} images={item.images[0]}/>
    ))}
   </div>
     </div>

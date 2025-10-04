@@ -37,7 +37,7 @@ const NewLetter = () => {
                     {/* Phone */}
                     <div className="flex items-center gap-3">
                         <Phone className="text-blue-600 w-6 h-6" />
-                        <p className="text-gray-700 text-lg font-medium">+91 98491 86401</p>
+                        <p className="text-gray-700 text-lg font-medium">+91  98491 86401</p>
                     </div>
 
                     {/* Email */}

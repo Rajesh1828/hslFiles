@@ -38,7 +38,7 @@ const Cart = () => {
     message += `-------------------\nTotal: ${currency}${total}`;
 
     // Replace with your WhatsApp number (with country code, no + or spaces)
-    const phoneNumber = "9032181871"; 
+    const phoneNumber = " 98491 86401";
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
@@ -79,7 +79,7 @@ const Cart = () => {
                 <div className='flex items-center gap-4 sm:col-span-1'>
                   <img
                     className='w-16 h-16 object-cover rounded'
-                    src={item.images}
+                    src={item.images[0]}
                     alt={item.name}
                   />
                   <div className='w-full break-words'>

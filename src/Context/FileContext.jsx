@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
-import { toast } from "react-toast";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import { backend_url } from "../../../admin/src/App";
 // import { collection } from "../assets/assets";
 
@@ -9,27 +10,32 @@ export const StoreContextFileProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
   const [collection, setCollection] = useState([]);
    const currency = "₹";
-   const backend_url="https://hslbackend-5.onrender.com"
+   const backend_url="https://hitechstation-2.onrender.com"
 
   // Function to add an item to the cart
-  const addToCart = (itemId, size) => {
-    let cartData = structuredClone(cartItems);
-    if (!size) {
-      toast.error("Please select a size");
-      return;
-    }
-    if (cartData[itemId]) {
-      if (cartData[itemId][size]) {
-        cartData[itemId][size] += 1;
-      } else {
-        cartData[itemId][size] = 1;
-      }
+const addToCart = (itemId, size) => {
+  let cartData = structuredClone(cartItems);
+
+  if (!size) {
+    toast.error("Please select a size");
+    return;
+  }
+
+  if (cartData[itemId]) {
+    if (cartData[itemId][size]) {
+      cartData[itemId][size] += 1;
     } else {
-      cartData[itemId] = {};
       cartData[itemId][size] = 1;
     }
-    setCartItems(cartData);
-  };
+  } else {
+    cartData[itemId] = {};
+    cartData[itemId][size] = 1;
+  }
+
+  setCartItems(cartData);
+  toast.success("Item added to cart");
+};
+
 
   // Update quantity
   const updateQuantity = (itemId, size, quantity) => {
@@ -41,7 +47,7 @@ export const StoreContextFileProvider = ({ children }) => {
   // Fetch collection safely
   const fetchCollection = async () => {
     try {
-      const response = await fetch(`${backend_url}/api/product/list`);
+      const response = await fetch(`${backend_url}/api/products/list`);
       const data = await response.json();
       console.log("Fetched data:", data);
 
@@ -77,7 +83,8 @@ export const StoreContextFileProvider = ({ children }) => {
     return totalCount;
   };
 
-  // Function to remove an item from the cart
+// Function to remove an item from the cart
+
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };

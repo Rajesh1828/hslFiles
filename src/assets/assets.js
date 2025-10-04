@@ -19,7 +19,20 @@ import about_blog_banner from './About_Blog_Banner.png';
 import banner_1 from './banner-1.png';
 import banner_2 from './banner-2.png';
 import banner_3 from './banner-3.png'; 
+import banner_11 from './banner_1.png'; 
 
+
+//scrolling
+ import ButtonFiles from './scrolling/ButtonFiles.png';
+ import ClothBags from './scrolling/ClothBags.png';
+ import DesignPouch from './scrolling/DesignPouch.png';
+ import DocumentFiles from './scrolling/DocumentFiles.png';
+ import Files from './scrolling/Files0.png';
+ import OfficeFiles from './scrolling/OfficeFiles.png';
+ import PocketExpandingFiles from './scrolling/PocketExpandFiles.png';
+ import ReportFiles from './scrolling/ReportFiles.png';
+ import SatinClothZipperPoch from './scrolling/SatinClothZipperPoch.png';
+ import ZipFiles from './scrolling/ZipFiles.png';
 
 //categories
 
@@ -107,7 +120,6 @@ import zipper_bags from './zipper_bags.png';
 
 
 
-
 export const category = [
   {
     _id: 1,
@@ -153,8 +165,8 @@ export const category = [
   },
   {
     _id: 8,
-    name: "spiralbooks",
-    label: "Spiral Books",
+    name: "hitechfiles",
+    label: "Hi Tech Files",
     image: spiral_books
   }
 ];
@@ -191,6 +203,7 @@ export const assets = {
   banner_1,
   banner_2,
   banner_3,
+  banner_11,
   s_1,
   s_2,
   s_3,
@@ -232,6 +245,18 @@ export const assets = {
   spiral_books,
   strip_files,
   zip_files,
-  zipper_bags
+  zipper_bags,
+
+
+  ButtonFiles,
+  ClothBags,
+  DesignPouch,
+  DocumentFiles,
+  Files,
+  OfficeFiles,
+  ReportFiles,
+  ZipFiles,
+  PocketExpandingFiles,
+  SatinClothZipperPoch,
   
 }

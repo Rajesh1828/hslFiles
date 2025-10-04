@@ -5,11 +5,20 @@
 
 .mySwiper img {
   width: 100%;
-  /* height: 720px; */
+  height: 720px;
   object-fit: cover;
   display: block;
 }
 
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 .swiper-pagination-bullet-active {
   background-color: #000000 !important; /* Change to your brand color */
 }
@@ -39,7 +48,7 @@
 
 .slide img {
   width: 100%;
-  height: 100%;
+  height: 720px;
   object-fit: cover;
 }
 
@@ -70,8 +79,32 @@
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .slide-text {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     width: 100%;
     padding: 5px 10px;
+  }
+
+  .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cta-btn{
+  background-color: #FF3F33 ;
+  color: #ffffff;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 250;
+  border: none;
+}
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
   }
 }

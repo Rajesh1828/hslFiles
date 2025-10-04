@@ -23,6 +23,7 @@ body{
     font-optical-sizing: auto;
     font-style: normal;
     overflow-x: hidden;
+    text-transform: capitalize ;
 }
 
   
@@ -53,3 +54,23 @@ body{
  .scroll-over::-webkit-scrollbar{
   display: none;
  }
+
+
+
+ @keyframes shine {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.animate-shine {
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.animate-shine {
+  animation: shine 2s linear infinite;
+}

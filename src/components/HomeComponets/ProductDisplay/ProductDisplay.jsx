@@ -29,7 +29,7 @@ const ProductDisplay = ({ isActive, selectedSize }) => {
             key={item._id}
             id={item._id}
             name={item.name}
-            images={item.images}
+            images={item.images[0] || item.images}
           />
         ))}
       </div>

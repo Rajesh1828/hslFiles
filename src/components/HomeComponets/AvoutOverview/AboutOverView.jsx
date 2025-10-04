@@ -21,9 +21,11 @@ const AboutOverView = () => {
 </h2>
 <div className='mt-5 flex flex-col gap-3 px-5 md:px-10 md:py-10'>
 
-        <p className=' text-justify'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis assumenda in, sequi nisi sapiente eum aut tenetur ab neque. Ipsa quis omnis quam quaerat a doloribus. Reprehenderit nihil tempore saepe.</p>
-        <p className=' text-justify'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae ipsa, adipisci asperiores cum maiores voluptates! Error sit dolores inventore facilis, fuga dolorum nisi architecto repellendus porro sunt voluptates esse exercitationem.</p>
-        <p className=' text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente repellendus nisi, cumque, nesciunt harum error ea ullam quis autem sit delectus temporibus officiis eveniet possimus natus veritatis ratione? Eligendi, quia!
+        <p className=' text-justify'>At HiTech Stationery, we specialize in providing premium-quality files and folders designed to meet both professional and academic needs. Our products are crafted with durability, style, and functionality in mind, ensuring that you can organize and protect your important documents with ease</p>
+        <p className=' text-justify'>We take pride in being a trusted distributor of stationery files and 
+          folders across Andhra Pradesh, delivering excellence to offices, institutions, and individuals. Whether it’s for corporate use, educational purposes, or personal organization, 
+          our wide range of products ensures there’s a perfect solution for every requirement.</p>
+        <p className=' text-justify'>With a strong focus on quality and customer satisfaction, HiTech Stationery continues to set benchmarks in the stationery distribution sector. Our files and folders are not only practical but also designed to enhance productivity and create a professional impression.
         </p>
 </div>
       </div>

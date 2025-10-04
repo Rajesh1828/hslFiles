@@ -6,52 +6,52 @@ const NewArrivels = () => {
   const logos = [
     {
       id: 1,
-      image: assets.scribbling_books,
+      image: assets.ButtonFiles,
       title: "Planner",
     },
     {
       id: 2,
-      image: assets.security_bags,
+      image: assets.ClothBags,
       title: "Writing Tools",
     },
     {
       id: 3,
-      image: assets.strip_files,
+      image: assets.DesignPouch,
       title: "Paper",
     },
     {
       id: 4,
-      image: assets.spirac_books,
+      image: assets.DocumentFiles,
       title: "Planner",
     },
     {
       id: 5,
-      image: assets.spiral_books,
+      image: assets.Files,
       title: "Writing Tools",
     },
     {
       id: 6,
-      image: assets.zip_files,
+      image: assets.PocketExpandingFiles,
       title: "Paper",
     },
     {
-      id: 5,
-      image: assets.box_files,
+      id: 7,
+      image: assets.SatinClothZipperPoch,
       title: "Writing Tools",
     },
     {
-      id: 6,
-      image: assets.plastic_Lined_zipper_bratch,
+      id: 8,
+      image: assets.ReportFiles,
       title: "Paper",
     },
     {
-      id: 5,
-      image: assets.zip_files,
+      id: 9,
+      image: assets.ZipFiles,
       title: "Writing Tools",
     },
     {
-      id: 6,
-      image: assets.zipper_bags,
+      id: 10,
+      image: assets.OfficeFiles,
       title: "Paper",
     },
 
